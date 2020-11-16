@@ -1,0 +1,8 @@
+ public static int base2(String bits) {
+        int ans = 0;
+        for (int i = bits.length() - 1, f = 1; i >= 0; i--) {
+            ans += f * (bits.charAt(i) - '0');
+            f <<= 1;
+        }
+        return ans;
+    }
